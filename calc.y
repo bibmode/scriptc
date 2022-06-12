@@ -19,9 +19,15 @@ void yyerror (char *strError);
 
 %%
 
-main       :    display ':' exp             {printf("%d\n", $3);}
-           |    display ':' str             {
+main       :    display ':' exp ';'         {printf("%d\n", $3);}
+           |    display ':' str ';'         {
                                               printf("%s\n", $3);
+                                            }
+           |    main display ':' exp ';'    {
+                                              printf("%d\n", $4);
+                                            }
+           |    main display ':' str ';'    {
+                                              printf("%s\n", $4);
                                             }
            ;
 exp        :    term                        {$$ = $1;}

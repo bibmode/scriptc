@@ -9,7 +9,7 @@
 
 "display"                               {return display;}
 [0-9]+		                              {yylval.num = atoi(yytext); return number;}
-\"([^"]|\\\")*\"                             {
+\"([^"]|\\\")*\"                        {
                                           yylval.s = strdup(yytext+1);
                                           if (yylval.s[yyleng-2] != '"')
                                               yyerror("improperly terminated string");
@@ -17,7 +17,8 @@
                                               yylval.s[yyleng-2] = 0;
                                           return strVal;
                                         }
-[-+/*=():\n]	                          {return yytext[0];}
+[ \t\n]                                 ;
+[-+/*=():;]   	                        {return yytext[0];}
 .		                                    {yyerror("Unexpected Character");}
 
 %%
