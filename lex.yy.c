@@ -296,16 +296,16 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    4,    1,    1,    1,    1,    1,    5,
-        5,    5,    5,    1,    5,    1,    5,    6,    6,    6,
-        6,    6,    6,    6,    6,    6,    6,    5,    1,    1,
+        5,    6,    5,    1,    5,    1,    5,    7,    7,    7,
+        7,    7,    7,    7,    7,    7,    7,    5,    1,    1,
         5,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    7,    1,    1,    8,
+        1,    1,    1,    8,    1,    1,    9,    1,    1,   10,
 
-        1,    1,    1,    1,    9,    1,    1,   10,    1,    1,
-        1,   11,    1,    1,   12,    1,    1,    1,    1,    1,
-       13,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,   11,    1,    1,   12,    1,    1,
+        1,   13,    1,    1,   14,    1,    1,    1,    1,    1,
+       15,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -322,40 +322,42 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[14] =
+static yyconst int yy_meta[16] =
     {   0,
-        1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1
+        1,    1,    2,    1,    1,    2,    1,    2,    1,    1,
+        1,    1,    1,    1,    1
     } ;
 
 static yyconst short int yy_base[22] =
     {   0,
-        0,    0,   25,   26,   26,   26,    0,   26,   18,   14,
-       18,   15,    8,   15,    7,    7,    9,    2,   26,   26,
-       13
+        0,    0,   26,   27,   27,   27,    0,   27,   18,   13,
+       19,   15,    7,   27,    7,    7,    9,    2,   27,   27,
+       14
     } ;
 
 static yyconst short int yy_def[22] =
     {   0,
        20,    1,   20,   20,   20,   20,   21,   20,   20,   20,
-       21,   20,   20,   21,   20,   20,   20,   20,   20,    0,
+       21,   20,   20,   20,   20,   20,   20,   20,   20,    0,
        20
     } ;
 
-static yyconst short int yy_nxt[40] =
+static yyconst short int yy_nxt[43] =
     {   0,
-        4,    5,    6,    7,    8,    9,    4,   10,    4,    4,
-        4,    4,    4,   11,   19,   18,   17,   16,   14,   15,
-       12,   14,   13,   12,   20,    3,   20,   20,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20
+        4,    5,    6,    7,    8,    8,    9,    4,    4,   10,
+        4,    4,    4,    4,    4,   11,   19,   18,   17,   16,
+       15,   12,   14,   13,   12,   20,    3,   20,   20,   20,
+       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
+       20,   20
     } ;
 
-static yyconst short int yy_chk[40] =
+static yyconst short int yy_chk[43] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,   21,   18,   17,   16,   15,   14,   13,
-       12,   11,   10,    9,    3,   20,   20,   20,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20
+        1,    1,    1,    1,    1,   21,   18,   17,   16,   15,
+       13,   12,   11,   10,    9,    3,   20,   20,   20,   20,
+       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
+       20,   20
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -376,7 +378,7 @@ char *yytext;
 #include <stdlib.h>
 #include <string.h>
 #include "calc.tab.h"	
-#line 380 "lex.yy.c"
+#line 382 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -530,7 +532,7 @@ YY_DECL
 #line 8 "calc.l"
 
 
-#line 534 "lex.yy.c"
+#line 536 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -587,7 +589,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 26 );
+		while ( yy_base[yy_current_state] != 27 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -655,7 +657,7 @@ YY_RULE_SETUP
 #line 24 "calc.l"
 ECHO;
 	YY_BREAK
-#line 659 "lex.yy.c"
+#line 661 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 

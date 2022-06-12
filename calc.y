@@ -18,6 +18,7 @@ void yyerror (char *strError);
 %type <num> exp term factor
 
 %%
+
 main       :    display ':' exp             {printf("%d\n", $3);}
            |    display ':' str             {
                                               printf("%s\n", $3);
