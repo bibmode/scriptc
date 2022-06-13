@@ -8,7 +8,7 @@
 %%
 
 "display"                               {return display;}
-[0-9]+		                              {yylval.num = atoi(yytext); return number;}
+[0-9]+		                            {yylval.num = atoi(yytext); return number;}
 \"([^"]|\\\")*\"                        {
                                           yylval.s = strdup(yytext+1);
                                           if (yylval.s[yyleng-2] != '"')

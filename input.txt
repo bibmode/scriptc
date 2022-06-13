@@ -1,2 +1,2 @@
-display:1+2;
-display:1+2;
+display"lavranz soidyhfosidig";
+display1+2;
